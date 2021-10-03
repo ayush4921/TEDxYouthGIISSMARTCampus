@@ -658,7 +658,7 @@ body {
 
 .online-announcement {
   width: 100%;
-  font: 3em "VT323", monospace;
+  font: 3em "poppins", bold;
   text-align: center;
 }
 @media only screen and (max-width: 600px) {
@@ -669,36 +669,36 @@ body {
   }
 }
 .text-copy {
-  fill: #00010302;
+  fill: #00000000;
   stroke: black;
-  stroke-dasharray: 6% 29%;
+  stroke-dasharray: 5% 5%;
   stroke-width: 5px;
   stroke-dashoffset: 0%;
   animation: stroke-offset 5.5s infinite linear;
 }
 
 .text-copy:nth-child(1) {
-  stroke: #4d060d;
+  stroke: #ff0000;
   animation-delay: -1;
 }
 
 .text-copy:nth-child(2) {
-  stroke: #666;
+  stroke: rgb(255, 0, 0);
   animation-delay: -2s;
 }
 
 .text-copy:nth-child(3) {
-  stroke: #333;
+  stroke: rgb(255, 0, 0);
   animation-delay: -3s;
 }
 
 .text-copy:nth-child(4) {
-  stroke: #aaa;
+  stroke: rgb(0, 0, 0);
   animation-delay: -4s;
 }
 
 .text-copy:nth-child(5) {
-  stroke: #e62b1e;
+  stroke: #000000;
   animation-delay: -5s;
 }
 
@@ -753,7 +753,7 @@ body {
   margin: auto;
   font-family: "Poppins", sans-serif;
   font-size: calc(7px + 2.5vw);
-  color: #cccccc;
+  color: #fff;
   padding-left: 40px;
   padding-right: 40px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -769,8 +769,8 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   line-height: 1;
-  text-shadow: 0 0 5px #ffffff;
-  opacity: 0.9;
+  text-shadow: 0 0 5px #000;
+  opacity: 1;
 }
 
 .theme-info-container {
