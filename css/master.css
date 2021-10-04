@@ -600,6 +600,22 @@ body {
   justify-content: center;
 }
 
+.menu-btn-active {
+  position: relative;
+  margin: 5px;
+  padding: 1vw;
+  border: 2px solid #e62b1e;
+  flex-grow: 1;
+  font-family: "Commissioner", sans-serif;
+  font-size: calc(8px + 2vw);
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e62b1e;
+  color: white;
+}
+
 .menu-btn:hover {
   background-color: #e62b1e;
   color: white;
@@ -613,6 +629,9 @@ body {
     flex-flow: row;
   }
   .menu-btn {
+    font-size: calc(8px + 1vw);
+  }
+  .menu-btn-active {
     font-size: calc(8px + 1vw);
   }
 }
