@@ -38,6 +38,101 @@
     <link rel="stylesheet" href="css/master.css" />
     <link rel="icon" href="media-content/favicon/favicon.png" sizes="32x32" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+/* general styling */
+:root {
+  --smaller: .75;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+    </style>
+    <script>
+      (function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+      
+  const countDown = new Date("Oct 11, 2021 09:00:00").getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "Event is Today!";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+    </script>
   </head>
   <body style="overflow-y: hidden; overflow-x: hidden">
     <canvas id="acanvas" style="display: none"></canvas>
@@ -243,6 +338,45 @@
             "
             >11th October 2021</span
           >
+          <div class="container">
+            <div id="countdown">
+              <ul>
+                <li style="
+                font-size: calc(1vw + 1.5px);
+                font-family: 'Poppins', sans-serif;
+              "><span id="days"  style="
+                  font-size: calc(17px + 2vw);
+                  font-family: 'Poppins', sans-serif;
+                  color: #e62b1e;
+                "></span>days</li>
+                <li style="
+                font-size: calc(1vw + 1.5px);
+                font-family: 'Poppins', sans-serif;
+              "> <span id="hours"  style="
+                  font-size: calc(17px + 2vw);
+                  font-family: 'Poppins', sans-serif;
+                  color: #e62b1e;
+                "></span>Hours</li>
+                <li style="
+                font-size: calc(1vw + 1.5px);
+                font-family: 'Poppins', sans-serif;
+              "><span id="minutes"  style="
+                  font-size: calc(17px + 2vw);
+                  font-family: 'Poppins', sans-serif;
+                  color: #e62b1e;
+                "></span>Minutes</li>
+                <li style="
+                font-size: calc(1vw + 1.5px);
+                font-family: 'Poppins', sans-serif;
+              "><span id="seconds"  style="
+                  font-size: calc(17px + 2vw);
+                  font-family: 'Poppins', sans-serif;
+                  color: #e62b1e;
+                "></span>Seconds</li>
+              </ul>
+            </div>
+          </div>
+          <p class="event-details">
           <br />to listen to <span style="color: black">insightful talks</span>,
           <span style="color: black">breathtaking performances</span>, and
           engage in <span style="color: black">interaction sessions</span> with
@@ -252,7 +386,9 @@
           >
           afterwards.
         </p>
-        <p></p>
+        </p>
+        <br>
+        </div>
         <br />
         <div class="" style="width: 100%; text-align: center">
           <div
@@ -283,6 +419,7 @@
           <div class="theme">
             <strong>THE FABRIC OF BEING</strong>
           </div>
+          <br> <br> <br> <br>
           <br /><br /><br />
         </div>
       </div>
