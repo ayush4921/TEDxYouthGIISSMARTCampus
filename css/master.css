@@ -597,6 +597,7 @@ body {
   border: 2px solid #e62b1e;
   flex-grow: 1;
   font-family: "Commissioner", sans-serif;
+  font-weight: 900;
   font-size: calc(8px + 2vw);
   transition: background-color 0.2s, color 0.2s;
   display: flex;
